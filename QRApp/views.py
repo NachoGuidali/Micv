@@ -7,3 +7,6 @@ def home(request):
         "links" : Qrlink.objects.all()
     }
     return render(request, "index.html", context=context )
+
+def cv(request):
+    return render(request, "cv.html")
