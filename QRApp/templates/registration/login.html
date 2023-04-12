@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar</title>
+</head>
+<body>
+    <style>
+        button[type="submit"] {
+  background-color: #3e29ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+        form{
+            display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-group{
+    margin-bottom: 5px;
+}
+    </style>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-6 col-md-offset-e">
+                <div class="form-group">
+                    <label for="username">Nombre de usuario:</label>
+                    <input class="form-control" type="text" name="username">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-e">
+                <div class="form-group">
+                    <label for="username">Contraseña:</label>
+                    <input class="form-control" type="password" name="password">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-e">
+                <div class="form-group">
+                    <a href="#">Olvide mi contraseña</a>
+                    <button class="" type="submit" value="ingresar">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

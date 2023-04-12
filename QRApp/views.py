@@ -10,3 +10,6 @@ def home(request):
 
 def cv(request):
     return render(request, "cv.html")
+
+def login(request):
+    return render(request, "login.html")
