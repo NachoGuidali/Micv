@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from .models import Qrlink
 
 # Create your views here.
+@login_required
 def home(request):
     context = {
         "links" : Qrlink.objects.all()
@@ -41,9 +43,7 @@ def register_view(request):
     
     return render(request, "registration/register.html", {})
 
+def logout_view(request):
+    logout(request)
+    return redirect("/home")
 
-"""else:
-            #si no existe lo crea y despues entra a la url
-            user = User.objects.create_user(username=username, password=password)
-            login(request, user)
-            return redirect("/home")"""

@@ -9,6 +9,43 @@
     <title>QRApp</title>
 </head>
 <body>
+    <!--
+    <style>
+        header{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 0px;
+    
+    
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 40px;
+    right: 0px;
+    background-color: #969696;
+    color: white;
+}    
+.a_logout{
+    margin-left: 10px;
+    text-decoration: none;
+
+}
+.a_logout:hover{
+    box-shadow: none;
+    font-size: 20px ;
+}
+    </style>
+    -->
+    <header>
+        <div class="head">
+            <p>{{ user.username | upper }}</p>
+            <a class="a_logout" href="{% url 'logout' %}">Cerrar Sesion</a>
+        </div>
+    </header>
    
     <div class="container">
         <div class="titulo">
