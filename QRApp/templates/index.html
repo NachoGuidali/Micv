@@ -1,62 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'index.css' %}" >
     <title>QRApp</title>
 </head>
 <body>
-    <style>
-        html{
-            background-color: rgb(157, 250, 219);
-        }
-        .qrlink{
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-direction: row;
-            
-            
-            }
-        h1 {
-            text-decoration: underline;
-            font-size: 48px;
-        }    
-        a:hover {
-            font-size: 24px;
-            box-shadow: 10px 10px 10px 0px rgb(38, 69, 248);
-        }
-        .container{
-            display: flex;
-            flex-direction: column;
-            margin-top: 10rem;
-            
-            
-        }
-        .links {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        img{
-            width: 370px;
-            height: 370px;
-        }
-        .titulos{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-        h2{
-            text-decoration: solid;
-        }
-        .titulo{
-            display: flex;
-            justify-content: center;
-        }
-    </style>
+   
     <div class="container">
         <div class="titulo">
             <h1>Ignacio Guidali</h1>
@@ -85,6 +38,11 @@
         
         </div>
             
-    </div>    
+    </div> 
+    <footer>
+        <div class="footer">
+           <p class="p-footer"> Made By Nacho Guidali </p>
+        </div>
+    </footer>   
 </body>
 </html>

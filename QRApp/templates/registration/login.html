@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block name %}Ingresar{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
 </head>
 <body>
     {% if error_message %}
@@ -14,64 +16,13 @@
         </div>
     </div>    
     {% endif %}
-    <style>
-        .button{
-            background-color: #3e29ff;
-            color: white;
-            padding: 8.5px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-            margin-left: 5px;
-            
-            
-
-        }
-        .alert_cartel{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .alert{
-            
-            background-color: #ff5a5a;
-            border: solid red;
-            text-align: center;
-            width: 30rem;
-        }
-
-        button[type="submit"] {
-        background-color: #3e29ff;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-}
-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.botones{
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
     
-}
-.form{
-    margin-bottom: 5px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-    </style>
     
     <form action="" method="post">
+        <div class="titulo">
+            <h3>Inicie Sesion o Registrese para continuar</h3>
+    
+        </div>
         {% csrf_token %}
         <div class="row">
             <div class="column">
@@ -104,5 +55,11 @@ form{
         </div>
         {% endblock %}
     </form>
+    
+    <footer>
+        <div class="footer">
+           <p class="p-footer"> Made By Nacho Guidali </p>
+        </div>
+    </footer>
 </body>
 </html>
