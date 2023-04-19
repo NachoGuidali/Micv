@@ -21,7 +21,7 @@ def login_view(request):
         password = request.POST.get("password")
         #ahora verificamos si el ussuario y contraseña existe y luego entra a la url
         user = authenticate(request, username=username, password=password)
-        contraseña = authenticate(request, password=password)
+        
         if user is not None:
             login(request, user)
             return redirect("/home")
