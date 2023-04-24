@@ -17,7 +17,15 @@
     </div>    
     {% endif %}
     
-    
+    <header>
+        <div class="head">
+            <p>Hola {{ user.username | upper }}</p>
+            <a class="a_head" href="{% url 'home' %}">Home</a>
+            <a class="a_head" href="{% url 'QrNuevo' %}">Agregar QR</a>
+            <a class="a_head" href="{% url 'logout' %}">Cerrar Sesion</a>
+        </div>
+    </header>
+
     <form action="" method="post">
         <div class="titulo">
             <h3>Inicie Sesion o Registrese para continuar</h3>

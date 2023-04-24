@@ -6,17 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "{% static 'index.css' %}" >
-    <title>QRApp</title>
+    <title>{% block name %} QRApp {% endblock %}</title>
 </head>
 <body>
  
     <header>
         <div class="head">
-            <p>{{ user.username | upper }}</p>
-            <a class="a_logout" href="{% url 'logout' %}">Cerrar Sesion</a>
+            <p>Hola {{ user.username | upper }}</p>
+            <a class="a_head" href="{% url 'home' %}">Home</a>
+            <a class="a_head" href="{% url 'QrNuevo' %}">Agregar QR</a>
+            <a class="a_head" href="{% url 'logout' %}">Cerrar Sesion</a>
         </div>
     </header>
-   
+    {% block content %}
     <div class="container">
         <div class="titulo">
             <h1>Ignacio Guidali</h1>
@@ -46,6 +48,7 @@
         </div>
             
     </div> 
+    {% endblock %}
     <footer>
         <div class="footer">
            <p class="p-footer"> Made By Nacho Guidali </p>

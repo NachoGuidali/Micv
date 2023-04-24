@@ -1,6 +1,37 @@
 html{
     background-color: rgba(157, 250, 219, 0.76);
 }
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+        
+        
+    }
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 30px;
+    
+    
+    background-color: #969696;
+    color: white;
+    }    
+.a_head{
+    margin-left: 20px;
+    text-decoration: none;
+    
+    }
+.a_head:hover{
+    box-shadow: none;
+    font-size: 20px ;
+    }
+
 .qrlink{
     display: flex;
     align-items: center;
@@ -64,33 +95,36 @@ footer{
     margin-right: 10px;
     
     }
-header{
+form{
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-        
-        
-    }
-.head{
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 20rem;
-    height: 30px;
     
     
-    background-color: #969696;
-    color: white;
-    }    
-.a_logout{
+
+}
+.form{
+    margin-top: 1rem;
+    border: solid 1px;
+    width: auto;
     margin-left: 20px;
-    text-decoration: none;
-    
-    }
-.a_logout:hover{
-    box-shadow: none;
-    font-size: 20px ;
-    }
+    justify-content: center;
+    align-items: center;
+}
+.save_button{
+    display: flex;
+    margin-bottom: 10px;
+    margin-inline: auto;
+}
+
+.div_titulo_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.titulo_form{
+    text-align: center;
+}

@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .models import Qrlink
+from .forms import QrlinkForm
 
 # Create your views here.
 @login_required
@@ -47,3 +48,12 @@ def logout_view(request):
     logout(request)
     return redirect("/home")
 
+def QrNuevo(request):
+    if request.method == "POST":
+        form = QrlinkForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("/home")
+    else:
+        form = QrlinkForm()    
+    return render(request, "qrnuevo.html", {"form": form})
