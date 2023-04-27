@@ -24,28 +24,34 @@
             <h1>Ignacio Guidali</h1>
         </div>
         
-        <div class="titulos">
+        <!-- <div class="titulos">
             <h2>Linkedin</h2>
             <h2>Curriculum Vitae</h2>
             <h2>Instagram</h2>
-        </div>
+        </div> -->
         
         
     
         <div class="qrlink">
             
             {% for link in links %}
-            <img src="{{link.qr.url}}" alt="">
+            <div class="card_qr">
+                <img src="{{link.qr.url}}" alt="">
+                <p>{{link.titulo}}</p>
+                <a href="{{ link.link }}">Link directo</a>
+
+            </div>
+            
             {% endfor %}
             
             
         </div>
-        <div class="links">
+        <!-- <div class="links">
             <a href="https://www.linkedin.com/in/guidaliignacio/">Link directo Linkedin</a>
             <a href="http://127.0.0.1:8000/cv">Curriculum Vitae HTML</a>
             <a href="https://www.instagram.com/nachoguidali/">Link directo Instagram</a>
         
-        </div>
+        </div> -->
             
     </div> 
     {% endblock %}

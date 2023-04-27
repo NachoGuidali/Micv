@@ -1,6 +1,32 @@
 html{
     background-color: rgba(157, 250, 219, 0.76);
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    
+
 }
+
+footer{
+    bottom: 0px;
+    margin-bottom: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    width: 100%;
+    height: 40px;
+    background-color: #444444;
+    
+    
+    
+    
+    }
+.footer{
+    margin-right: 10px;
+    
+    }
+
 header{
     display: flex;
     justify-content: flex-end;
@@ -34,12 +60,24 @@ header{
 
 .qrlink{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
     
     
     }
+.card_qr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 20px;  
+    flex-wrap: wrap;
+    border: solid 1px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
 h1 {
     text-decoration: underline;
     font-size: 48px;
@@ -62,6 +100,9 @@ a:hover {
     margin-top: 20px;
 }
 img{
+    
+    border-top-right-radius: 30px ;
+    border-top-left-radius: 30px;
     width: 370px;
     height: 370px;
 }
@@ -77,24 +118,7 @@ h2{
     display: flex;
     justify-content: center;
 }
-footer{
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    color: white;
-    width: 100%;
-    height: 40px;
-    left: 0;
-    background-color: #444444;
-    bottom: 0px;
-    
-    
-    
-    }
-.footer{
-    margin-right: 10px;
-    
-    }
+
 form{
     display: flex;
     flex-direction: column;

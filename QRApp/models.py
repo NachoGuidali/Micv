@@ -5,3 +5,4 @@ from django.utils import timezone
 class Qrlink(models.Model):
     qr = models.ImageField()
     titulo = models.CharField(max_length=100)
+    link = models.CharField(max_length=400, default="")
