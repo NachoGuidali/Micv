@@ -41,8 +41,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30rem;
+    width: auto;
     height: 30px;
+    padding-right: 10px;
     
     
     background-color: #969696;

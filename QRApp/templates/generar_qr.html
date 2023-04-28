@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block name %} Crear Qr {% endblock %}
+
+{% block content %}
+<div class="div_titulo_form">
+    <h2 class="titulo_form">
+        Genere su QR aqui</h2>
+
+</div>
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Generar QR</button>
+      </form>
+</div>
+{% endblock %}

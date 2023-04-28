@@ -1,9 +1,11 @@
+import qrcode
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from .models import Qrlink
-from .forms import QrlinkForm
+from .forms import QrlinkForm, GenerarQrForm
 
 # Create your views here.
 @login_required
@@ -57,3 +59,15 @@ def QrNuevo(request):
     else:
         form = QrlinkForm()    
     return render(request, "qrnuevo.html", {"form": form})
+
+
+
+def generar_qr(request):
+    if request.method == 'POST':
+        form = GenerarQrForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/home")
+    else:
+        form = GenerarQrForm()
+    return render(request, 'generar_qr.html', {'form': form})
