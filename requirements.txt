@@ -1,0 +1,5 @@
+# Requeriments
+
+Django==4.1.7
+Pillow
+Qrcode
